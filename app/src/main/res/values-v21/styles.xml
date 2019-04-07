@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--导航栏-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--同时设置，statusBarColor比colorPrimaryDark优先级更高-->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏颜色
+        相同点 修改statusBar颜色
+        Android 5.0以上才能支持
+
+        不同点 statusBarColor具有更高优先级
+        statusBarColor在Android 5.0以下的版本种会出现警告提示
+        默认情况下，statusBarColor的值继承自colorPrimaryDark-->
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="android:statusBarColor">@color/mainColor</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+</resources>
